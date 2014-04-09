@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGrabCam.h"
+
 
 class ofApp : public ofBaseApp{
 
@@ -19,4 +21,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+    ofxGrabCam camera;
+
+    
+    vector<ofPolyline>          lines;
+    vector<ofPlanePrimitive>    imgPlanes;
+    vector<ofImage>             imgTextures;
+    bool imgon;
+    
+    float rotationX;
+    float rotationY;
+    float depth;
+
 };
